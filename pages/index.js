@@ -4,6 +4,8 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import blocks from '../styles/blocks.module.css'
+import Mainboxes from '../components/mainboxes';
 
 export async function getStaticProps() { //async function means that this is ran before / alongside everything else since other elements on the page depend on info brought by staticprops
   const allPostsData = getSortedPostsData();
@@ -21,10 +23,6 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>I'm Bailey! I'm currently trying to improve upon my web development skills to push further forward in my career.</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
@@ -40,6 +38,8 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
+     <Mainboxes></Mainboxes>
+     
     </Layout>
   );
 }

@@ -26,6 +26,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
+        {/* THIS IS FOR THE HEADER THINGS THAT IS PRESENT WHEREVER LAYOUT IS CALLED, THE IMAGE CHANGES SIZES BASED ON PAGE e.g. <Layout home> ETC */}
         {home ? (
           <>
             <Image
@@ -58,7 +59,9 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
+      {/* THIS IS WHERE ALL OTHER CONTENT GOES WHEN LAYOUT IS CALLED ONTO OTHER PAGES */}
       <main>{children}</main>
+      {/* THIS IS WHERE CONTENT INTENDED FOR THE BOTTOM OF THE PAGE GOES */}
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>
