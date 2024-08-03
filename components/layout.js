@@ -1,15 +1,17 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import MainGif from './mainGif';
+import blocks from '../styles/blocks.module.css';
+import Mainboxes from './mainboxes';
 
 const name = 'Bailey Y';
-export const siteTitle = 'Portfolio development site';
+export const siteTitle = 'Digital Portfolio';
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div className={blocks.pageWrap}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -25,37 +27,25 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+      <header className={blocks.headerBanner}>
         {/* THIS IS FOR THE HEADER THINGS THAT IS PRESENT WHEREVER LAYOUT IS CALLED, THE IMAGE CHANGES SIZES BASED ON PAGE e.g. <Layout home> ETC */}
         {home ? (
           <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt=""
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+          <section>
+             <div className={blocks.boxColumns}>
+
+             <MainGif></MainGif>
+             <h1 className={`${utilStyles.headingXl} ${utilStyles.uppercase} ${utilStyles.semibold}`}>Digital Portfolio</h1>
+             <Mainboxes></Mainboxes>
+
+             </div>
+          </section>
+          
           </>
         ) : (
           <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt=""
-              />
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {name}
-              </Link>
-            </h2>
+            <h1 className={`${utilStyles.headingXl} ${utilStyles.uppercase} ${utilStyles.semibold}`}>Digital Portfolio</h1>
+            <Mainboxes></Mainboxes>
           </>
         )}
       </header>
