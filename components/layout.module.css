@@ -1,7 +1,10 @@
+
 .container {
     max-width: 80rem;
     padding: 0 1rem;
     margin: 3rem auto 6rem;
+
+    
   }
 /*   
   .header {
@@ -14,3 +17,4 @@
     margin: 3rem 0 0;
   }
 
+  

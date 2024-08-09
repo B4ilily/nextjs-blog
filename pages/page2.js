@@ -7,6 +7,7 @@ import indexStyles from '../styles/index.module.css'
 import blocks from '../styles/blocks.module.css'
 import Image from 'next/image';
 import utilStyles from '../styles/utils.module.css';
+import RecentUploads from '../components/recentuploads';
 
 
 export async function getStaticProps() { //async function means that this is ran before / alongside everything else since other elements on the page depend on info brought by staticprops
@@ -17,9 +18,9 @@ export async function getStaticProps() { //async function means that this is ran
     },
   };
 }
-export default function Home({ allPostsData }) {
+export default function Page2({ allPostsData }) {
   return (
-    <Layout home>
+    <Layout page2>
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -42,17 +43,7 @@ export default function Home({ allPostsData }) {
       </section> */}
       {/* <MainGif></MainGif> */}
      <section>
-      <Link href="/page2">
-      <button className={`${indexStyles.button} ${blocks.boxRows}`} >
-        {/* ADD BUTTON FUNCTIONALITY */}
-      <Image className={utilStyles.imageToWhite}
-            src='/images/down-arrow.png'
-            width={20}
-            height={20}
-
-            /> 
-         </button>
-         </Link>
+     <RecentUploads></RecentUploads>
      </section>
      
      

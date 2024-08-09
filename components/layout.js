@@ -44,8 +44,10 @@ export default function Layout({ children, home }) {
           </>
         ) : (
           <>
+          <section>
             <h1 className={`${utilStyles.headingXl} ${utilStyles.uppercase} ${utilStyles.semibold}`}>Digital Portfolio</h1>
             <Mainboxes></Mainboxes>
+          </section>
           </>
         )}
       </header>
