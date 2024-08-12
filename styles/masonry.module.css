@@ -1,24 +1,6 @@
-.myMasonryGrid {
-    display: -webkit-box; /* Not needed if autoprefixing */
-    display: -ms-flexbox; /* Not needed if autoprefixing */
-    display: flex;
-    margin-left: -30px; /* gutter size offset */
-    width: auto;
-  }
-  .myMasonryGridColumn {
-    padding-left: 30px; /* gutter size */
-    background-clip: padding-box;
-  }
-  
-  /* Style your items */
-  .myMasonryGridColumn > div { /* change div to reference your elements you put in <Masonry> */
-    background: grey;
-    margin-bottom: 30px;
-  }
-
-  .item{
+.item{
     width:100%;
-    height:5rem;
+  height:100%;
     background-color: aqua;
     align-content: center;
 }
@@ -36,33 +18,43 @@
     text-align: center;
   }
   .masonryColumns{
-    background-color: #be0d0d;
+    background-color: #000;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+ 
     padding: 0;
     width:70vw;
     margin:auto;
     flex-wrap: wrap;
-    height:40vh;
-    max-height: 40vh;
+    overflow:scroll;
+    max-height: 54vh;
     margin-top:0.78em;
     align-content:space-between;
    
   }
 
-  .itemsLeft{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-around;
-    width:49%;
-    height:100%;
+  .masonryColumns::-webkit-scrollbar{
+    display:none;
+  }
 
-  }
-  .itemsRight{
-    display:flex;
-    flex-wrap: wrap;
-    width:49%;
-    height:100%;
-  }
+ 
+
+
+
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+ 
+ 
+    text-align: center;
+    width:100%;
+    align-items: center;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 2 / 1 / 3 / 2; }
+    .div3 { grid-area: 3 / 1 / 4 / 2; }
+    .div4 { grid-area: 1 / 2 / 2 / 3; }
+    .div5 { grid-area: 2 / 2 / 3 / 3; }
+    .div6 { grid-area: 3 / 2 / 4 / 3; }

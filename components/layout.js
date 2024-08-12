@@ -35,7 +35,7 @@ export default function Layout({ children, home }) {
              <div className={blocks.boxColumns}>
 
              <MainGif></MainGif>
-             <h1 className={`${utilStyles.headingXl} ${utilStyles.uppercase} ${utilStyles.semibold}`}>Digital Portfolio</h1>
+             <h1 className={`${utilStyles.heading2Xl} ${utilStyles.uppercase} ${utilStyles.semibold}`}>Digital Portfolio</h1>
              <Mainboxes></Mainboxes>
 
              </div>

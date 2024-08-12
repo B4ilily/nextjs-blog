@@ -5,21 +5,30 @@ import blocks from '../styles/blocks.module.css'
 export default function NavList(){
     return(
         <div className={`${blocks.nav} ${utilStyles.reducedSpacing}`}>
-            <p className={`${utilStyles.headingXl} ${utilStyles.reducedSpacing}`}>
+            <h3 className={`${utilStyles.headingXl} ${utilStyles.reducedSpacing} `}>
                 Explore
-            </p>
-            <div class={`${utilStyles.uppercase} ${utilStyles.list}`}>
+            </h3>
+            <div className={`${utilStyles.uppercase} ${utilStyles.list}`}>
                 <ul>
-                    E-CV
+                    <Link href="/ecv">
+                        E-CV
+                    </Link> 
                 </ul>
                 <ul>
-                    Work Showcase
+                    <Link href="/workshowcase">
+                        Work Showcase
+                    </Link> 
+                    
                 </ul>
                 <ul>
-                    Interests & Hobbies
+                    <Link href="/interestsandhobbies">
+                        Interests & Hobbies
+                    </Link> 
                 </ul>
                 <ul>
-                    Contact
+                <Link href="/contact">
+                        Contact
+                    </Link>
                 </ul>
             </div>
         </div>

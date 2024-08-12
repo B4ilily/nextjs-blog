@@ -7,22 +7,22 @@ export default function Sidebar(){
         <div className={blocks.sidebar}>
         <Image className={utilStyles.imageToWhite}
             src="/images/github-character.png"
-            width={60}
-            height={50}
+            width={40}
+            height={30}
             alt="custom icon linking to a github profile"   
         />         
         <hr className={utilStyles.seperationLine}></hr>
         <Image className={utilStyles.imageToWhite}
             src="/images/paper-plane.png"
-            width={60}
-            height={50}
+            width={40}
+            height={30}
             alt="custom icon linking to a github profile"   
         />  
         <hr className={utilStyles.seperationLine}></hr>
         <Image className={utilStyles.imageToWhite}
             src="/images/rain.png"
-            width={60}
-            height={50}
+            width={40}
+            height={30}
             alt="custom icon linking to a github profile"   
         />  
         </div>
