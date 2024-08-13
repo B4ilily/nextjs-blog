@@ -3,14 +3,16 @@ import Qualifications from './qualifications';
 import blocks from '../styles/blocks.module.css'
 import BioList from './bioblock';
 import Sidebar from './sidebar';
+import Experience from './experience';
+import Skills from './skills';
 
 export default function EcvBoxes(){
     return(
     <section>
-        <div className={blocks.boxRows}>
+        <div className={blocks.ecvboxRows}>
           <Qualifications></Qualifications>
-          <BioList></BioList>
-          <Sidebar></Sidebar>
+          <Experience></Experience>
+          <Skills></Skills>
           
         </div>
       </section>
