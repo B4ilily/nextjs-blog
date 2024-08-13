@@ -42,17 +42,20 @@ export default function Home({ allPostsData }) {
       </section> */}
       {/* <MainGif></MainGif> */}
      <section>
-      <Link href="/page2">
-      <button className={`${indexStyles.button} ${blocks.boxRows}`} >
-        {/* ADD BUTTON FUNCTIONALITY */}
-      <Image className={utilStyles.imageToWhite}
-            src='/images/down-arrow.png'
-            width={20}
-            height={20}
+
+      <div className={indexStyles.buttonContainer}>
+        <Link href="/page2">
+          <button className={`${indexStyles.button} ${indexStyles.buttonContainer} `} >
+            {/* ADD BUTTON FUNCTIONALITY */}
+            <Image className={utilStyles.imageToWhite}
+                    src='/images/down-arrow.png'
+                    width={20}
+                    height={20}
 
             /> 
-         </button>
-         </Link>
+          </button>
+          </Link>
+       </div>
      </section>
      
      

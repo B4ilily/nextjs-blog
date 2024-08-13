@@ -36,7 +36,7 @@ export default function Layout({ children, home }) {
 
              <MainGif></MainGif>
              <Link href="/">
-             <h1 className={`${utilStyles.heading2Xl} ${utilStyles.uppercase} ${utilStyles.semibold}`}>Digital Portfolio</h1>
+             <h1 className={`${utilStyles.heading2Xl} ${utilStyles.uppercase} ${utilStyles.semibold} ${utilStyles.margin0}`}>Digital Portfolio</h1>
              </Link>
              <Mainboxes></Mainboxes>
 
